@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "generate": "prisma generate",
+    "build": "bun run generate && next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "bun test",
-    "check": "bun run lint && bun run typecheck && bun test && bun run build",
+    "check": "bun run generate && bun run lint && bun run typecheck && bun test && next build",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "screenshots": "node scripts/shots.mjs"
