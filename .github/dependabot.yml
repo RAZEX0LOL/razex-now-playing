@@ -4,6 +4,16 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "@prisma/client"
+        update-types:
+          - version-update:semver-major
+      - dependency-name: prisma
+        update-types:
+          - version-update:semver-major
+      - dependency-name: framer-motion
+        update-types:
+          - version-update:semver-major
     groups:
       production-dependencies:
         dependency-type: production

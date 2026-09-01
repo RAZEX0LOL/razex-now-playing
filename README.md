@@ -62,7 +62,7 @@ The in-memory event store is deliberate for a single-instance self-hosted deploy
 
 ## Quick start
 
-Requirements: Bun 1.2+, Docker with Compose, and a modern Node-compatible runtime.
+Requirements: Bun 1.4+, Docker with Compose, and a modern Node-compatible runtime.
 
 1. Create local configuration:
 
