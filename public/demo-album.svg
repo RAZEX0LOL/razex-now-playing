@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Midnight Drive demo cover</title>
+  <desc id="description">Abstract violet and pink lights on a dark background.</desc>
+  <defs>
+    <radialGradient id="glow" cx="75%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#ff5c9d"/>
+      <stop offset="0.45" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <circle cx="392" cy="118" r="54" fill="#ffe4f0" opacity=".88"/>
+  <path d="M70 512 238 230h36l168 282Z" fill="#11111a" opacity=".9"/>
+  <path d="m248 512 15-238 16 238Z" fill="url(#road)"/>
+  <g fill="#fff" opacity=".72">
+    <circle cx="90" cy="105" r="3"/><circle cx="170" cy="64" r="2"/><circle cx="300" cy="92" r="3"/>
+    <circle cx="448" cy="248" r="2"/><circle cx="52" cy="278" r="2"/><circle cx="332" cy="188" r="2"/>
+  </g>
+</svg>

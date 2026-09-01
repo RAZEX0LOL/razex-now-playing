@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-panel: #14141d;
+  --color-panel-2: #1c1c28;
+  --color-border: #2a2a3a;
+  --color-text: #e9e9f2;
+  --color-muted: #9a9ab0;
+  --color-accent: #7c5cff;
+  --color-accent-2: #ff5c9d;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.brand-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-accent) 0%,
+    var(--color-accent-2) 100%
+  );
+}
+
+.brand-text {
+  background: linear-gradient(
+    100deg,
+    var(--color-accent) 0%,
+    var(--color-accent-2) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Widget overlay must be fully transparent for OBS browser sources */
+body.overlay {
+  background: transparent !important;
+}
+
+/* ---- Widget fonts ---- */
+.font-sans-w {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.font-rounded-w {
+  font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", "Hiragino Maru Gothic ProN",
+    Quicksand, system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+.font-mono-w {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+}
+
+/* ---- Widget animations ---- */
+@keyframes ambientPan {
+  0% { transform: scale(1.25) translate(-3%, -2%); }
+  50% { transform: scale(1.4) translate(3%, 2%); }
+  100% { transform: scale(1.25) translate(-3%, -2%); }
+}
+.ambient-pan {
+  animation: ambientPan 18s ease-in-out infinite;
+}
+
+@keyframes barPulse {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+.eq-bar {
+  transform-origin: bottom;
+  animation: barPulse 0.9s ease-in-out infinite;
+}
